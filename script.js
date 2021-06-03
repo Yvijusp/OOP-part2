@@ -10,6 +10,7 @@
 //  - arba kainą iki ir rodys prekes nuo minimalios galimos iki tos kainos kurią nurodė;
 const categories = ['T-shirts', 'Pants', 'Sweaters', 'Shoes'];
 
+// --- Class ---
 class Product {
   constructor(name, price, salePrice, category) {
     this.name = name;
@@ -28,12 +29,14 @@ class Product {
   }
 }
 
+// Made products using class
 const shoeNike = new Product('Nike shoes', 20, null, ['Shoes']);
 const pantsAdidas = new Product('Adidas pants', 30, 15, ['Pants']);
 const shirtAdidas = new Product('Adidas shirt', 20, 10, ['T-shirts']);
 const sweaterAdidas = new Product('Adidas sweater', 40, 40, ['Sweaters']);
 const pantsNike = new Product('Nike pants', 59, 40, ['Pants']);
 
+// Products pushed to array
 const currentProducts = [];
 
 currentProducts.push(
@@ -44,6 +47,7 @@ currentProducts.push(
   pantsNike
 );
 
+// Filter function
 const filterProduct = (products, inputPrice, compare) => {
   if (compare === 'nuo') {
     return products.filter((a) => {
